@@ -1,4 +1,4 @@
-title: "Bitrise Start Build"
+title: "Build Orchestrator"
 summary: Starts a new build with the specified Workflow(s).
 description: |-
   The Step starts a new build of the same app. In combination with the **Bitrise Wait for Build** Step you can use this Step to start multiple builds that run in parallel at the same time. You can put this Step in a Workflow that is triggered by a code push or pull request and use this Step to trigger multiple other builds at the same time. 
@@ -46,19 +46,19 @@ description: |-
   - [Bitrise Run](https://www.bitrise.io/integrations/steps/bitrise-run)
   - [Build Status Change](https://www.bitrise.io/integrations/steps/build-status-change)
 
-website: https://github.com/bitrise-steplib/bitrise-step-build-router-start
-source_code_url: https://github.com/bitrise-steplib/bitrise-step-build-router-start
-support_url: https://github.com/bitrise-steplib/bitrise-step-build-router-start/issues
+website: https://github.com/DanielJette/bitrise-step-build-orchestrator
+source_code_url: https://github.com/DanielJette/bitrise-step-build-orchestrator
+support_url: https://github.com/DanielJette/bitrise-step-build-orchestrator/issues
 
 type_tags:
-  - utility
+  - build
 
 is_always_run: false
 is_skippable: false
 
 toolkit:
   go:
-    package_name: github.com/bitrise-steplib/bitrise-step-build-router-start
+    package_name: github.com/bitrise-steplib/bitrise-step-build-orchestrator
 
 inputs:
   - access_token:
