@@ -18,7 +18,7 @@ import (
 	"github.com/bitrise-io/go-utils/colorstring"
 	"github.com/bitrise-io/go-utils/fileutil"
 	"github.com/bitrise-io/go-utils/log"
-	"github.com/bitrise-steplib/bitrise-step-build-router-start/test/converters"
+	"github.com/bitrise-steplib/bitrise-step-build-orchestrator/test/converters"
 )
 
 // FileInfo ...

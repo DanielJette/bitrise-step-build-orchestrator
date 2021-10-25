@@ -4,7 +4,7 @@ import (
     "context"
     "fmt"
     "github.com/bitrise-io/go-steputils/stepconf"
-    "github.com/bitrise-steplib/bitrise-step-build-router-start/util"
+    "github.com/bitrise-steplib/bitrise-step-build-orchestrator/util"
     "github.com/google/go-github/github"
     "golang.org/x/oauth2"
     "math"

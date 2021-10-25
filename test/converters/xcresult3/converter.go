@@ -9,7 +9,7 @@ import (
 	"github.com/bitrise-io/go-utils/log"
 	"github.com/bitrise-io/go-utils/pathutil"
 	"github.com/bitrise-io/go-xcode/xcodeproject/serialized"
-	"github.com/bitrise-steplib/bitrise-step-build-router-start/test/junit"
+	"github.com/bitrise-steplib/bitrise-step-build-orchestrator/test/junit"
 	"howett.net/plist"
 )
 

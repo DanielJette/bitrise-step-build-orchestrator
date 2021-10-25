@@ -1,4 +1,4 @@
-module github.com/bitrise-steplib/bitrise-step-orchestrator
+module github.com/bitrise-steplib/bitrise-step-build-orchestrator
 
 go 1.17
 

@@ -9,8 +9,8 @@ import (
     "github.com/bitrise-io/go-steputils/stepconf"
     "github.com/bitrise-io/go-steputils/tools"
     "github.com/bitrise-io/go-utils/log"
-    "github.com/bitrise-steplib/bitrise-step-build-router-start/bitrise"
-    "github.com/bitrise-steplib/bitrise-step-build-router-start/util"
+    "github.com/bitrise-steplib/bitrise-step-build-orchestrator/bitrise"
+    "github.com/bitrise-steplib/bitrise-step-build-orchestrator/util"
 )
 
 const envBuildSlugs = "ROUTER_STARTED_BUILD_SLUGS"

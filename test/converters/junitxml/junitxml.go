@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 	"strings"
 
-	"github.com/bitrise-steplib/bitrise-step-build-router-start/test/junit"
+	"github.com/bitrise-steplib/bitrise-step-build-orchestrator/test/junit"
 	"github.com/pkg/errors"
 )
 

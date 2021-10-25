@@ -4,8 +4,8 @@ import (
     "fmt"
     "github.com/bitrise-io/go-steputils/stepconf"
     "github.com/bitrise-io/go-utils/log"
-    "github.com/bitrise-steplib/bitrise-step-build-router-start/execmd"
-    "github.com/bitrise-steplib/bitrise-step-build-router-start/util"
+    "github.com/bitrise-steplib/bitrise-step-build-orchestrator/execmd"
+    "github.com/bitrise-steplib/bitrise-step-build-orchestrator/util"
 )
 
 type BuildConfig struct {

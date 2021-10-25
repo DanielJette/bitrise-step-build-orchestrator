@@ -6,10 +6,10 @@
 package converters
 
 import (
-	"github.com/bitrise-steplib/bitrise-step-build-router-start/test/converters/junitxml"
-	"github.com/bitrise-steplib/bitrise-step-build-router-start/test/converters/xcresult"
-	"github.com/bitrise-steplib/bitrise-step-build-router-start/test/converters/xcresult3"
-	"github.com/bitrise-steplib/bitrise-step-build-router-start/test/junit"
+	"github.com/bitrise-steplib/bitrise-step-build-orchestrator/test/converters/junitxml"
+	"github.com/bitrise-steplib/bitrise-step-build-orchestrator/test/converters/xcresult"
+	"github.com/bitrise-steplib/bitrise-step-build-orchestrator/test/converters/xcresult3"
+	"github.com/bitrise-steplib/bitrise-step-build-orchestrator/test/junit"
 )
 
 // Intf is the required interface a converter need to match

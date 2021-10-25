@@ -14,8 +14,8 @@ import (
     "github.com/bitrise-io/go-utils/log"
     "github.com/bitrise-io/go-utils/pathutil"
     "github.com/bitrise-io/go-utils/ziputil"
-    "github.com/bitrise-steplib/bitrise-step-build-router-start/test"
-    "github.com/bitrise-steplib/bitrise-step-build-router-start/uploaders"
+    "github.com/bitrise-steplib/bitrise-step-build-orchestrator/test"
+    "github.com/bitrise-steplib/bitrise-step-build-orchestrator/uploaders"
 )
 
 var fileBaseNamesToSkip = []string{".DS_Store"}

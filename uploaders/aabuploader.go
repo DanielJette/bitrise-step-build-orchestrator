@@ -5,8 +5,8 @@ import (
 	"fmt"
 
 	"github.com/bitrise-io/go-utils/log"
-	"github.com/bitrise-steplib/bitrise-step-build-router-start/androidartifact"
-	"github.com/bitrise-steplib/bitrise-step-build-router-start/bundletool"
+	"github.com/bitrise-steplib/bitrise-step-build-orchestrator/androidartifact"
+	"github.com/bitrise-steplib/bitrise-step-build-orchestrator/bundletool"
 )
 
 // DeployAAB ...
