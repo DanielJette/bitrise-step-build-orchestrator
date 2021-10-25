@@ -26,6 +26,7 @@ func DisplayInfo() {
 
 type PathConfig struct {
     Module      string     `env:"module,required"`
+    Type        string     `env:"module_type,opt[feature,root,testing]"`
 }
 
 func checkIfTestsExist(testPath string) bool {
@@ -40,8 +41,30 @@ func checkIfTestsExist(testPath string) bool {
 
 func isSkippable(module string) bool {
 
-    testModuleDir := strings.TrimPrefix(module, "feature-")
-    testPath := fmt.Sprintf("features/%s/src/androidTest", testModuleDir)
+    var cfg PathConfig
+    if err := stepconf.Parse(&cfg); err != nil {
+        util.Failf("Issue with an input: %s", err)
+    }
+
+    var testModuleDir string
+    var testPath string
+    var targetModule string
+
+    switch cfg.Type {
+    case "root":
+        testModuleDir = module
+        testPath = fmt.Sprintf("%s/src/androidTest", testModuleDir)
+        targetModule = module
+    case "testing":
+        testModuleDir = strings.TrimSuffix(module, "-tests")
+        testPath = fmt.Sprintf("testing/%s/src/androidTest", testModuleDir)
+        targetModule = "testing"
+    default:
+        testModuleDir = strings.TrimPrefix(module, "feature-")
+        testPath = fmt.Sprintf("features/%s/src/androidTest", testModuleDir)
+        targetModule = module
+    }
+
     exists := checkIfTestsExist(testPath)
     if !exists {
         log.Errorf("No tests detected in %s. Skipping build", module)
@@ -49,11 +72,11 @@ func isSkippable(module string) bool {
     }
 
     modules := gh.GetChangedModules()
-    if modules[module] == false {
-        log.Errorf("No changes detected in %s. Skipping build", module)
+    if modules[targetModule] == false {
+        log.Errorf("No changes detected in %s. Skipping build", targetModule)
         return true
     }
-    log.Infof("Changes to module %s found. Running tests.", module)
+    log.Infof("Changes to module %s found. Running tests.", targetModule)
     return false
 }
 
@@ -85,7 +108,7 @@ func main() {
         util.Failf("Issue with an input: %s", err)
     }
     timestamp()
-    // DisplayInfo()
+    DisplayInfo()
 
     if isSkippable(cfg.Module) {
         os.Exit(0)

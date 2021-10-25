@@ -101,6 +101,20 @@ inputs:
         Set the module that you want to build. To see your available modules, please open your project in Android Studio and go in [Project Structure] and see the list on the left.
       is_required: true
 
+  - module_type: "feature"
+    opts:
+      title: Module type
+      description: |-
+        The type of module to be tested. This is normally found by inspecting the path for the module.
+        For feature modules found in `./features/` this should be set to `feature`.
+        For root-level modules like `:services`, this should be set to `root`.
+        For modules found in `./testing`, this should be set to `testing`.
+      is_required: true
+      value_options:
+      - "feature"
+      - "root"
+      - "testing"
+
   - variant: "$VARIANT"
     opts:
       title: Variant
