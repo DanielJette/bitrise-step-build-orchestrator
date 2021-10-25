@@ -8,14 +8,13 @@ import (
     "path/filepath"
     "strings"
 
-    "github.com/bitrise-steplib/bitrise-step-build-router-start/test"
-
     "github.com/bitrise-io/envman/envman"
     "github.com/bitrise-io/go-steputils/stepconf"
     "github.com/bitrise-io/go-steputils/tools"
     "github.com/bitrise-io/go-utils/log"
     "github.com/bitrise-io/go-utils/pathutil"
     "github.com/bitrise-io/go-utils/ziputil"
+    "github.com/bitrise-steplib/bitrise-step-build-router-start/test"
     "github.com/bitrise-steplib/bitrise-step-build-router-start/uploaders"
 )
 

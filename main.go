@@ -5,15 +5,15 @@ import (
     "os"
     "strings"
     "time"
-    "github.com/bitrise-io/go-utils/log"
-    "github.com/bitrise-steplib/bitrise-step-build-router-start/env"
-    "github.com/bitrise-steplib/bitrise-step-build-router-start/execmd"
-    "github.com/bitrise-steplib/bitrise-step-build-router-start/gradle"
-    "github.com/bitrise-steplib/bitrise-step-build-router-start/deploy"
-    "github.com/bitrise-steplib/bitrise-step-build-router-start/trigger"
-    "github.com/bitrise-steplib/bitrise-step-build-router-start/gh"
     "github.com/bitrise-io/go-steputils/stepconf"
-    "github.com/bitrise-steplib/bitrise-step-build-router-start/util"
+    "github.com/bitrise-io/go-utils/log"
+    "github.com/bitrise-steplib/bitrise-step-build-orchestrator/deploy"
+    "github.com/bitrise-steplib/bitrise-step-build-orchestrator/env"
+    "github.com/bitrise-steplib/bitrise-step-build-orchestrator/execmd"
+    "github.com/bitrise-steplib/bitrise-step-build-orchestrator/gh"
+    "github.com/bitrise-steplib/bitrise-step-build-orchestrator/gradle"
+    "github.com/bitrise-steplib/bitrise-step-build-orchestrator/trigger"
+    "github.com/bitrise-steplib/bitrise-step-build-orchestrator/util"
 )
 
 func DisplayInfo() {

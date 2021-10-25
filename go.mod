@@ -1,4 +1,4 @@
-module github.com/bitrise-steplib/bitrise-step-build-router-start
+module github.com/bitrise-steplib/bitrise-step-orchestrator
 
 go 1.17
 
