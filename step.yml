@@ -61,6 +61,14 @@ toolkit:
     package_name: github.com/bitrise-steplib/bitrise-step-build-orchestrator
 
 inputs:
+  - forced: $FORCE_ORCHESTRATOR
+    opts:
+      title: "Force tests"
+      summary: "Force the tests to be run?"
+      description: |
+          When true, forces the tests to run for this module. Defaults to false.
+          Valid values are true or false. Usually configured with an environment variable.
+      is_required: false
   - access_token:
     opts:
       title: Bitrise Access Token

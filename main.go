@@ -27,6 +27,7 @@ func DisplayInfo() {
 type PathConfig struct {
     Module      string     `env:"module,required"`
     Type        string     `env:"module_type,opt[feature,root,testing]"`
+    Forced      bool       `env:"forced"`
 }
 
 func checkIfTestsExist(testPath string) bool {
@@ -44,6 +45,11 @@ func isSkippable(module string) bool {
     var cfg PathConfig
     if err := stepconf.Parse(&cfg); err != nil {
         util.Failf("Issue with an input: %s", err)
+    }
+
+    if cfg.Forced {
+        log.Infof("Forcing build")
+        return false
     }
 
     var testModuleDir string
