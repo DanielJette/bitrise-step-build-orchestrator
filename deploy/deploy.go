@@ -107,7 +107,21 @@ func Deploy() {
     if err := exportInstallPages(artifactURLCollection, config); err != nil {
         fail("%s", err)
     }
-    deployTestResults(config)
+    // This version of deploy does not support test results
+    // deployTestResults(config)
+
+    cleanUpDeployedFiles(clearedFilesToDeploy)
+}
+
+func cleanUpDeployedFiles(clearedFilesToDeploy []string) {
+    log.Printf("Cleaning up:")
+    for _, pth := range clearedFilesToDeploy {
+        log.Printf("- %s", pth)
+        e := os.Remove(pth)
+        if e != nil {
+            fail("%s",e)
+        }
+    }
 }
 
 func exportInstallPages(artifactURLCollection ArtifactURLCollection, config Config) error {
