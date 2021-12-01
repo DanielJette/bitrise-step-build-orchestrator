@@ -52,6 +52,11 @@ func isSkippable(module string) bool {
         return false
     }
 
+    if _, detected := os.LookupEnv("TARGET_MODULE"); detected {
+        log.Infof("TARGET_MODULE detected, forcing build")
+        return false
+    }
+
     var testModuleDir string
     var testPath string
     var targetModule string
