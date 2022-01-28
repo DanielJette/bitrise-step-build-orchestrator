@@ -117,11 +117,13 @@ inputs:
         For feature modules found in `./features/` this should be set to `feature`.
         For root-level modules like `:services`, this should be set to `root`.
         For modules found in `./testing`, this should be set to `testing`.
+        For modules found in `./design`, this should be set to `design`.
       is_required: true
       value_options:
       - "feature"
       - "root"
       - "testing"
+      - "design"
 
   - variant: "$VARIANT"
     opts:

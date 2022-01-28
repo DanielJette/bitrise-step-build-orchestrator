@@ -26,7 +26,7 @@ func DisplayInfo() {
 
 type PathConfig struct {
     Module      string     `env:"module,required"`
-    Type        string     `env:"module_type,opt[feature,root,testing]"`
+    Type        string     `env:"module_type,opt[feature,root,testing,design]"`
     Forced      bool       `env:"forced"`
 }
 
@@ -70,6 +70,10 @@ func isSkippable(module string) bool {
         testModuleDir = strings.TrimSuffix(module, "-tests")
         testPath = fmt.Sprintf("testing/%s/src/androidTest", testModuleDir)
         targetModule = "testing"
+    case "design":
+        testModuleDir = strings.TrimPrefix(module, "design-")
+        testPath = fmt.Sprintf("design/%s/src/androidTest", testModuleDir)
+        targetModule = module
     default:
         testModuleDir = strings.TrimPrefix(module, "feature-")
         testPath = fmt.Sprintf("features/%s/src/androidTest", testModuleDir)
