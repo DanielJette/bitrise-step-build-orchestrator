@@ -71,7 +71,7 @@ func isSkippable(module string) bool {
         testPath = fmt.Sprintf("testing/%s/src/androidTest", testModuleDir)
         targetModule = "testing"
     case "design":
-        testModuleDir = strings.TrimPrefix(module, "design-")
+        testModuleDir = strings.TrimPrefix(strings.TrimPrefix(module, "design-"), "-tests")
         testPath = fmt.Sprintf("design/%s/src/androidTest", testModuleDir)
         targetModule = module
     default:
